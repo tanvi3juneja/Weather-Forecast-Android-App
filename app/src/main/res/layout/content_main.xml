@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forecast"
+        android:id="@+id/heading"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:layout_marginTop="36dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/street"
+        android:id="@+id/tvStreet"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/heading"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="44dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etStreet"
+        android:layout_marginStart="21dp"
+        android:layout_alignBaseline="@id/tvStreet"
+        android:layout_alignStart="@+id/heading"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/city"
+        android:id="@+id/tvCity"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/tvStreet"
+        android:layout_alignStart="@+id/tvStreet" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etCity"
+        android:layout_alignBaseline="@+id/tvCity"
+        android:layout_alignStart="@+id/etStreet"
+        android:layout_alignEnd="@+id/etStreet" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/state"
+        android:id="@+id/tvState"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_below="@+id/tvCity"
+        android:layout_alignStart="@+id/tvCity"
+        android:layout_marginTop="29dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinState"
+        android:layout_alignTop="@+id/tvState"
+        android:layout_alignStart="@+id/etCity"
+        android:layout_alignEnd="@+id/etCity" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Degree"
+        android:id="@+id/tvDegree"
+        android:textSize="20sp"
+        android:textColor="#000000"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/tvState" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/tvDegree"
+        android:layout_alignStart="@+id/spinState"
+        android:layout_above="@+id/bClear"
+        android:id="@+id/radiogroup">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fahrenheit"
+            android:id="@+id/rbFahrenheit"
+            />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Celsius"
+            android:id="@+id/rbDegree"
+            />
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/search"
+        android:id="@+id/bSearch"
+        android:layout_below="@+id/tvDegree"
+        android:layout_alignStart="@+id/tvDegree"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        android:id="@+id/bClear"
+        android:onClick="onClick"
+        android:layout_alignTop="@+id/bSearch"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/about"
+        android:id="@+id/bAbout"
+        android:layout_marginBottom="27dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/bSearch" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/power"
+        android:id="@+id/tvPower"
+        android:textColor="#000000"
+        android:layout_alignTop="@+id/bAbout"
+        android:layout_alignEnd="@+id/spinState" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/iForecast"
+        android:src="@drawable/forecast_logo"
+        android:layout_below="@+id/tvPower"
+        android:layout_alignEnd="@+id/tvPower"
+        android:layout_toEndOf="@+id/heading"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/tvError"
+        android:textColor="#FF0000"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/bClear"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="41dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/tvState"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="486dp"></TableLayout>
+
+</RelativeLayout>

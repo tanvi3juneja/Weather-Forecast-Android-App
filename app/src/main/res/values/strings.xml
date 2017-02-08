@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Forecast</string>
+    <string name="action_settings">Settings</string>
+    <string name="forecast">Forecast Search</string>
+    <string name="street">Street</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="degree">Celsius</string>
+    <string name="search">Search</string>
+    <string name="clear">Clear</string>
+    <string name="about">About</string>
+    <string name="power">Powered By:</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="name">Name: Akanksha</string>
+    <string name="studentid">Student Id: 5250661320 </string>
+    <string name="title_activity_detail">DetailActivity</string>
+    <string name="facebook_app_id">1519286165062260</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_map_view">Map</string>
+    <string name="aeris_client_id">DMFjzjRwR1NMMqSTH4MHO</string>
+    <string name="aeris_client_secret">wE2Fr8pq66nZyvu0GkPfagMSvGMN75J2UcH8614d</string>
+</resources>

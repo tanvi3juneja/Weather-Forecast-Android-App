@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "iberry.com.example.hw9"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'org.json:org.json:chargebee-1.0'
+    compile files('libs/httpclient-4.2.3.jar')
+    compile files('libs/httpcore-4.4.4.jar')
+    compile files('libs/aeris-android-lib-1.1.1.jar')
+    compile 'com.google.android.gms:play-services:8.3.0'
+    compile 'com.hamweather:aeris-maps-library:1.1.1@aar'
+    compile 'com.facebook.android:facebook-android-sdk:4.6.0'
+    compile 'com.android.support:multidex:1.0.1'
+    androidTestCompile 'com.android.support:multidex-instrumentation:1.0.1'
+}
